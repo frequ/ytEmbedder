@@ -33,5 +33,5 @@
   "scripts": {
     "start": "node ytEmbedder.js",
     "postinstall": "bower install"
-  },
+  }
 }
