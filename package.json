@@ -1,10 +1,6 @@
 {
   "name": "youtube-embedder",
   "version": "0.0.1",
-  "scripts": {
-    "start": "node ytEmbedder.js",
-    "postinstall": "bower install"
-  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-usemin": "~2.0.0",
@@ -33,5 +29,9 @@
   "engines": {
     "node": "0.10.x",
     "npm": "^2.1.0"
-  }
+  },
+  "scripts": {
+    "start": "node ytEmbedder.js",
+    "postinstall": "./node_modules/bower/bin/bower install"
+  },
 }
