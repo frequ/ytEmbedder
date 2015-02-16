@@ -1,0 +1,10 @@
+{
+  "name": "youtube-embedder",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "*",
+    "angular-youtube-mb": "~0.1.6",
+    "bootstrap": "~3.3.2"
+  },
+  "devDependencies": {}
+}
