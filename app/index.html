@@ -24,8 +24,9 @@
                       ng-show="videoId" video-id="videoId"></youtube-video>
     </div>
     <div class="buttonsWrapper">
-      <button ng-disabled="playing" type="button" ng-click="ytPlayer.playVideo()" class="btn btn-success">Soita</button>
-      <button ng-disabled="!playing" type="button" ng-click="ytPlayer.pauseVideo()" class="btn btn-danger">Pysäytä</button>
+      <button ng-disabled="playing" type="button" ng-click="ytPlayer.playVideo()" class="btn btn-success">Soita video</button>
+      <button ng-disabled="!playing" type="button" ng-click="ytPlayer.pauseVideo()" class="btn btn-danger">Pysäytä video</button>
+      <button type="button" ng-click="historyBack()" class="btn btn-inverse">Takaisin palveluun</button>
     </div>
 </div>
 

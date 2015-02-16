@@ -13,7 +13,7 @@
         });
     })
 
-    .controller('MainCtrl', function($scope, $location, $log){
+    .controller('MainCtrl', function($scope, $location, $log, $window){
 
         $scope.playing = false;
         $scope.message = 'O-ou. Videon id puuttuu. Lisää osoitteen perään ?videoId=videonId.';
@@ -42,6 +42,10 @@
 
         $scope.getParams = function(){
             $scope.videoId = $location.search().videoId;
+        };
+
+        $scope.historyBack = function(){
+            $window.history.back();
         };
 
         $scope.$on('youtube.player.ended', function ($event, player) {
