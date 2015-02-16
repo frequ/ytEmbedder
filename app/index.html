@@ -15,28 +15,34 @@
 </head>
 <body>
 
-<div ng-controller="MainCtrl" ng-init="getParams()">
-    <div ng-hide="videoId" class="warning">{{ message }}</div>
+    <div ng-controller="MainCtrl" ng-init="getParams()">
+        <div ng-hide="videoId" class="warning">{{ message }}</div>
 
-    <div class="videoWrapper">
-      <youtube-video  player="ytPlayer" player-vars="playerVars"
-                      player-width="'560px'" player-height="'350px'"
-                      ng-show="videoId" video-id="videoId"></youtube-video>
+        <div class="videoWrapper">
+            <youtube-video  player="ytPlayer" player-vars="playerVars"
+            player-width="'560px'" player-height="'350px'"
+            ng-show="videoId" video-id="videoId"></youtube-video>
+        </div>
+        <div class="buttonsWrapper">
+            <button ng-disabled="playing" type="button" ng-click="ytPlayer.playVideo()" class="btn btn-lg btn-success">
+                <span class="glyphicon glyphicon-play" aria-hidden="true"></span> Soita video
+            </button>
+            <button ng-disabled="!playing" type="button" ng-click="ytPlayer.pauseVideo()" class="btn btn-lg btn-danger">
+                <span class="glyphicon glyphicon-pause" aria-hidden="true"></span> Pysäytä video
+            </button>
+            <button type="button" ng-click="historyBack()" class="btn btn-lg btn-inverse">
+                <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Takaisin palveluun
+            </button>
+        </div>
     </div>
-    <div class="buttonsWrapper">
-      <button ng-disabled="playing" type="button" ng-click="ytPlayer.playVideo()" class="btn btn-success">Soita video</button>
-      <button ng-disabled="!playing" type="button" ng-click="ytPlayer.pauseVideo()" class="btn btn-danger">Pysäytä video</button>
-      <button type="button" ng-click="historyBack()" class="btn btn-inverse">Takaisin palveluun</button>
-    </div>
-</div>
 
-<!-- build:js js/youtubeEmbedder.js -->
-<!-- bower:js -->
-<script src="vendor/angular/angular.js"></script>
-<script src="vendor/angular-youtube-mb/src/angular-youtube-embed.js"></script>
-<!-- endbower -->
-<script type="text/javascript" src="js/app.js"></script>
-<!-- endbuild -->
+    <!-- build:js js/youtubeEmbedder.js -->
+    <!-- bower:js -->
+    <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/angular-youtube-mb/src/angular-youtube-embed.js"></script>
+    <!-- endbower -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- endbuild -->
 
 </body>
 </html>
