@@ -8,7 +8,7 @@
     "immed" : true,
     "latedef" : true,
     "newcap" : true,
-    "strict" : false,
+    "strict" : true,
     "trailing" : true,
     "globals": {
         "angular": false
