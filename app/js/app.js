@@ -19,10 +19,15 @@
         $scope.message = 'O-ou. Videon id puuttuu. Lisää osoitteen perään ?videoId=videonId.';
         $scope.playerVars = {
             controls: 0,
-            autoplay: 1,
             rel: 0,
-            showinfo: 0
+            showinfo: 0,
+            iv_load_policy: 3,
+            modestbranding: 1,
+            cc_load_policy: 0
         };
+        $scope.$on('youtube.player.ready', function($event, player){
+            player.playVideo();
+        })
 
         $scope.$on('youtube.player.playing', function($event, player){
             $log.info('yt playing');
