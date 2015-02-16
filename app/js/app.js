@@ -27,7 +27,7 @@
         };
         $scope.$on('youtube.player.ready', function($event, player){
             player.playVideo();
-        })
+        });
 
         $scope.$on('youtube.player.playing', function($event, player){
             $log.info('yt playing');
