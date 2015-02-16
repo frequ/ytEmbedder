@@ -7,12 +7,12 @@ var express = require('express'),
 var app = express();
 var oneYear = 31557600000;
 
-app.set('port', 3333);
+app.set('port', (process.env.PORT || 5000));
 app.use(compression());
 app.use(bodyParser());
 
 app.use(express.static(path.join(__dirname, 'app'), {maxAge: oneYear}));
 
-
-var server = http.createServer(app).listen(app.get('port'));
-console.log('youtube embedder started on port ' + app.get('port'));
+app.listen(app.get('port'), function(){
+  console.log('youtube embedder started on port ' + app.get('port'));
+});
