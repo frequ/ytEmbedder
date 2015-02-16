@@ -53,7 +53,8 @@ module.exports = function (grunt) {
         },
         copy: {
             dist: {
-                files: [{
+                files: [
+                    {
                         expand: true,
                         dot: true,
                         cwd: '<%= assetsDir %>',
@@ -62,6 +63,13 @@ module.exports = function (grunt) {
                             'index.html',
                             'img/**'
                         ]
+                    },
+                    {
+                        expand: true,
+                        cwd: '<%= assetsDir %>/vendor/bootstrap',
+                        dest: '<%= distDir %>/',
+                        src: ['fonts/**']
+
                     }]
             }
         },
