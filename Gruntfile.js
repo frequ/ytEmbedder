@@ -167,4 +167,5 @@ module.exports = function (grunt) {
         'browserSync',
         'watch'
     ]);
+    grunt.registerTask('heroku', ['package']);
 };
