@@ -1,1 +1,1 @@
-web: node ytEmbedder.js
+web: npm start

@@ -2,7 +2,8 @@
   "name": "youtube-embedder",
   "version": "0.0.1",
   "scripts": {
-    "postinstall": "bower cache clean && bower install"
+    "start": "node ytEmbedder.js",
+    "postinstall": "bower install"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -30,6 +31,7 @@
     "express": "^4.11.2"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "0.10.x",
+    "npm": "^2.1.0"
   }
 }
