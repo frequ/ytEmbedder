@@ -1,6 +1,6 @@
 {
     "undef": true,
-    "camelcase" : true,
+    "camelcase" : false,
     "curly" : true,
     "eqeqeq" : true,
     "forin" : true,
